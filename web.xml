@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <!-- Servlet -->
+    <servlet>
+        <servlet-name>TemperatureServlet</servlet-name>
+        <servlet-class>your.package.TemperatureServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TemperatureServlet</servlet-name>
+        <url-pattern>/convert</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter -->
+    <filter>
+        <filter-name>TempFilter</filter-name>
+        <filter-class>your.package.TempFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>TempFilter</filter-name>
+        <url-pattern>/convert</url-pattern>
+    </filter-mapping>
+
+    <!-- Listener -->
+    <listener>
+        <listener-class>your.package.RequestListener</listener-class>
+    </listener>
+</web-app>
